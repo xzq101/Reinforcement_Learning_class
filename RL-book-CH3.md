@@ -1,3 +1,4 @@
+
 # Reinforcement_Learning_class
 
 ## Value Function Derivation in Markov Decision Process (MDP)
@@ -30,7 +31,7 @@ $$
 
 2.  **对下一个状态 $s'$ 和奖励 $r$ 求和：** 在采取了动作 $a$ 之后，环境会根据其动态特性，以概率 $p(s',r|s,a)$ 转移到下一个状态 $s'$ 并给出奖励 $r$。因此，我们需要对所有可能的 $(s',r)$ 组合进行求和。
 
-3.  **计算括号内的期望：** 括号内的部分是 $R_{t+1} + \gamma G_{t+1}$。在给定了 $(s,a,s',r)$ 之后 $R_{t+1} $ 的值就是 $r$。而 $G_{t+1}$ 是从状态 $s'$ 开始的未来收益，其期望是 $\mathbb{E}_\pi[G_{t+1} \mid S_{t+1}=s']$。
+3.  **计算括号内的期望：** 括号内的部分是 $R_{t+1} + \gamma G_{t+1}$。在给定了 $(s,a,s',r)$ 之后 ![equation](https://latex.codecogs.com/png.image?\dpi{110}R_{t+1} ) 的值就是 $r$。而 $G_{t+1}$ 是从状态 $s'$ 开始的未来收益，其期望是 $\mathbb{E}_\pi[G_{t+1} \mid S_{t+1}=s']$。
 
 综合以上步骤，我们就得到了下一行：
 
