@@ -9,7 +9,7 @@
 ## **1. 动态规划的核心思想**
 在强化学习中，动态规划主要用于：
 1. **预测（Prediction）**：计算给定策略 $( \pi )$ 的状态值函数 ( $v_\pi(s)$ ) 或动作值函数 ( $q_\pi(s, a)$ )。
-2. **控制（Control）**：优化策略 (  $\pi$ )，找到最优策略 ( $\pi^*$ ) 和最优值函数 \( v_*(s) \) 或 \( q_*(s, a) \)。
+2. **控制（Control）**：优化策略 (  $\pi$ )，找到最优策略 ( π <sup>*</sup> ) 和最优值函数 \( v_*(s) \) 或 \( q_*(s, a) \)。
 
 动态规划的关键假设：
 - **环境模型已知**（Model-Based）：即状态转移概率 \( p(s', r | s, a) \) 已知。
@@ -19,9 +19,9 @@
 
 ## **2. 动态规划的主要算法**
 
-<img src="ch4-r1.png" alt="State Transition Example" width="600"/> 
-<img src="ch4-r2.png" alt="State Transition Example" width="600"/> 
-<img src="ch4-r3.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r1.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r2.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r3.png" alt="State Transition Example" width="600"/> 
 
 ### **(1) 策略评估（Policy Evaluation）**
 **输入 (Input)**: 给定策略 ( $\pi$ )
@@ -36,7 +36,7 @@ $v_{k+1}(s) = \sum_a \pi(a|s) \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_k
 
 ### HW2
 
-<img src="ch4-r1.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r1.png" alt="State Transition Example" width="600"/> 
 
  
 ### **算法参数 (Algorithm parameter)**
@@ -94,7 +94,7 @@ $v_{k+1}(s) = \sum_a \pi(a|s) \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_k
 3. **策略改进**：生成新策略 \( \pi_{k+1} \)（贪心策略）。
 4. **重复**，直到策略不再变化。
 
-<img src="ch4-r2.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r2.png" alt="State Transition Example" width="600"/> 
 
 ### **(4) 值迭代（Value Iteration）**
 **目标**：直接优化值函数，不显式计算策略，直到收敛到最优值函数 \( v_* \)。  
@@ -103,7 +103,7 @@ $$
 v_{k+1}(s) = \max_a \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_k(s') \right]
 $$
 
-<img src="ch4-r3.png" alt="State Transition Example" width="600"/> 
+<img src="Ch4-r3.png" alt="State Transition Example" width="600"/> 
 
 ## **3. 动态规划的优缺点**
 ### **优点**
