@@ -42,9 +42,7 @@ $$
 
 ### 3.6 Optimal Policies and Optimal Value Functions
  Bellman optimality equation for $v_*(s)$
-$$
-v_*(s) \doteq \max_\pi v_\pi(s)
-$$
+![equation](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7Dv_%2A%28s%29%20%5Cdoteq%20%5Cmax_%5Cpi%20v_%5Cpi%28s%29)
 
 $$
 q_*(s,a) \doteq \max_\pi q_\pi(s,a)
@@ -68,5 +66,6 @@ q_*(s,a) &= \mathbb{E}[R_{t+1} + \gamma \max_{a'} q_*(S_{t+1}, a') \mid S_t=s, A
 &= \sum_{s',r} p(s',r \mid s,a) [r + \gamma \max_{a'} q_*(s',a')]
 \end{align*}
 $$
+<img src="ch3_eq_01.png" alt="State Transition Example" width="800"/>
 
 <img src="backup_v_best.png" alt="State Transition Example" width="400"/>
