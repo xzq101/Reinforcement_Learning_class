@@ -15,6 +15,15 @@ v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t=s] \\
 \end{align*}
 $$
 
+$$
+\begin{align*}
+v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t=s] \\
+&= \mathbb{E}_\pi[R_{t+1} + \gamma G_{t+1} \mid S_t=s] \\
+&= \sum_a \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma \mathbb{E}_\pi[G_{t+1}|S_{t+1}=s']] \\
+&= \sum_a \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma v_\pi(s')], \quad \text{for all } s \in \mathcal{S}
+\end{align*}
+$$
+
 #### 拆分期望：
 根据期望的线性性质，我们可以将期望拆分为两部分：
 $$
