@@ -14,14 +14,13 @@ v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t=s] \\
 &= \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma v_\pi(s')], \quad \text{for all } s \in \mathcal{S},
 \end{align*}
 $$
-
 $$
-\begin{align*}
-v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t=s] \\
-&= \mathbb{E}_\pi[R_{t+1} + \gamma G_{t+1} \mid S_t=s] \\
-&= \sum_a \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma \mathbb{E}_\pi[G_{t+1}|S_{t+1}=s']] \\
-&= \sum_a \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma v_\pi(s')], \quad \text{for all } s \in \mathcal{S}
-\end{align*}
+\begin{split}\begin{aligned}
+v_\pi(s) &\doteq \mathbb{E}_\pi[G_t|S_t=s] \\
+&= \mathbb{E}_\pi[R_{t+1} + \gamma G_{t+1}|S_t=s] (由 (3.9)) \\
+&= \sum_a\pi(a|s) \sum_{s^\prime}\sum_r p(s^\prime,r|s,a) \left[r+\gamma\mathbb{E}_\pi[G_{t+1}|S_{t+1}=s^\prime]\right] \\
+&= \sum_a\pi(a|s) \sum_{s^\prime,r}p(s^\prime,r|s,a)[r+\gamma v_\pi(s^\prime)], 对所有 s\in\mathcal{S}
+\end{aligned}\end{split}
 $$
 
 #### 拆分期望：
