@@ -14,13 +14,12 @@ v_\pi(s) &\doteq \mathbb{E}_\pi[G_t \mid S_t=s] \\
 &= \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma v_\pi(s')], \quad \text{for all } s \in \mathcal{S},
 \end{align*}
 $$
+
 ![v_pi equation](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bsplit%7D%5Cbegin%7Baligned%7D%20v_%5Cpi%28s%29%20%26%5Cdoteq%20%5Cmathbb%7BE%7D_%5Cpi%5BG_t%7CS_t%3Ds%5D%20%5C%5C%20%26%3D%20%5Cmathbb%7BE%7D_%5Cpi%5BR_%7Bt%2B1%7D%20%2B%20%5Cgamma%20G_%7Bt%2B1%7D%7CS_t%3Ds%5D%20%28%E7%94%B1%20%283.9%29%29%20%5C%5C%20%26%3D%20%5Csum_a%5Cpi%28a%7Cs%29%20%5Csum_%7Bs%5E%5Cprime%7D%5Csum_r%20p%28s%5E%5Cprime%2Cr%7Cs%2Ca%29%20%5Cleft%5Br%2B%5Cgamma%5Cmathbb%7BE%7D_%5Cpi%5BG_%7Bt%2B1%7D%7CS_%7Bt%2B1%7D%3Ds%5E%5Cprime%5Cright%5D%20%5C%5C%20%26%3D%20%5Csum_a%5Cpi%28a%7Cs%29%20%5Csum_%7Bs%5E%5Cprime%2Cr%7Dp%28s%5E%5Cprime%2Cr%7Cs%2Ca%29%5Br%2B%5Cgamma%20v_%5Cpi%28s%5E%5Cprime%29%5D%2C%20%E5%AF%B9%E6%89%80%E6%9C%89%20s%5Cin%5Cmathcal%7BS%7D%20%5Cend%7Baligned%7D%5Cend%7Bsplit%7D)
 
 #### 拆分期望：
 根据期望的线性性质，我们可以将期望拆分为两部分：
-$$
-\mathbb{E}_\pi[R_{t+1} + \gamma G_{t+1} \mid S_t=s] = \mathbb{E}_\pi[R_{t+1} \mid S_t=s] + \gamma \mathbb{E}_\pi[G_{t+1} \mid S_t=s]
-$$
+![equation](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%5Cmathbb%7BE%7D_%5Cpi%5BR_%7Bt%2B1%7D%20%2B%20%5Cgamma%20G_%7Bt%2B1%7D%20%7C%20S_t%3Ds%5D%20%3D%20%5Cmathbb%7BE%7D_%5Cpi%5BR_%7Bt%2B1%7D%20%7C%20S_t%3Ds%5D%20%2B%20%5Cgamma%20%5Cmathbb%7BE%7D_%5Cpi%5BG_%7Bt%2B1%7D%20%7C%20S_t%3Ds%5D)
 
 这是一个很棒的问题，因为这段文字描述了从期望到求和的推导过程，而不仅仅是公式本身。以下是这段文字的 Markdown + LaTeX 格式，将公式部分嵌入到文本中：
 
@@ -36,7 +35,7 @@ $$
 
 综合以上步骤，我们就得到了下一行：
 
-$$= \sum_{a} \pi(a|s) \sum_{s',r} p(s',r|s,a) [r + \gamma\mathbb{E}_\pi[G_{t+1}|S_{t+1}=s']]$$
+![equation](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%3D%20%5Csum_%7Ba%7D%20%5Cpi%28a%7Cs%29%20%5Csum_%7Bs%27%2Cr%7D%20p%28s%27%2Cr%7Cs%2Ca%29%20%5Br%20%2B%20%5Cgamma%20%5Cmathbb%7BE%7D_%5Cpi%5BG_%7Bt%2B1%7D%7CS_%7Bt%2B1%7D%3Ds%27%5D)
 
 
 <img src="backup_diagam_bellman.png" alt="State Transition Example" width="200"/>
