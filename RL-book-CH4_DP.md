@@ -20,8 +20,9 @@
 ## **2. 动态规划的主要算法**
 
 <img src="CH4_r1.png" alt="State Transition Example" width="600"/> 
-<img src="CH4_r2.png" alt="State Transition Example" width="600"/> 
 <img src="CH4_r3.png" alt="State Transition Example" width="600"/> 
+<img src="CH4_r2.png" alt="State Transition Example" width="600"/> 
+
 
 ### **(1) 策略评估（Policy Evaluation）**
 **输入 (Input)**: 给定策略 ( $\pi$ )
@@ -102,6 +103,8 @@ $v_{k+1}(s) = \sum_a \pi(a|s) \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_k
 $$
 v_{k+1}(s) = \max_a \sum_{s', r} p(s', r | s, a) \left[ r + \gamma v_k(s') \right]
 $$
+
+### HW2 coding
 
 <img src="CH4_r3.png" alt="State Transition Example" width="600"/> 
 
