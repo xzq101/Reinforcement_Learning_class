@@ -22,7 +22,7 @@ $$ \delta_{t} \doteq R_{t+1}+\gamma V\left(S_{t+1}\right)-V\left(S_{t}\right) $$
 
 
 ----------------------------------------
-这是一个很好的问题，因为 SARSA、Q-Learning 和 TD 都是强化学习中非常重要的无模型（model-free）控制算法，它们都属于**时序差分（Temporal-Difference, TD）学习**的范畴。
+ SARSA、Q-Learning 和 TD 都是强化学习中非常重要的无模型（model-free）控制算法，它们都属于**时序差分（Temporal-Difference, TD）学习**的范畴。
 
 让我们来理清它们之间的关系：
 
