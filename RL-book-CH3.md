@@ -69,3 +69,25 @@ $$
 <img src="ch3_eq_01.png" alt="State Transition Example" width="800"/>
 
 <img src="backup_v_best.png" alt="State Transition Example" width="400"/>
+
+### More equations
+
+
+$$G_t = R_{t+1} + \gamma G_{t+1} \quad \text{and} \quad G_5 = \sum_{k=0}^{\infty} \gamma^k R_{6+k} = 0$$
+
+The equation for $G_t$ is:
+
+$$G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \dots = \sum_{k=0}^{\infty} \gamma^k R_{t+1+k}$$
+
+---------------------------------
+
+### 贝尔曼方程（用于任意策略 $\pi$）
+
+
+$$q_{\pi}(s, a) = \sum_{s', r} p(s', r | s, a) \left[ r + \gamma \sum_{a'} \pi(a' | s') q_{\pi}(s', a') \right]$$
+
+**公式解释：**
+
+
+* **$\sum_{a'} \pi(a' | s') q_{\pi}(s', a')$**: 这是对下一个状态 $s'$ 的期望价值，即 $V_{\pi}(s')$。
+
